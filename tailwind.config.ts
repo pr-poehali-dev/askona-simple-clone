@@ -29,7 +29,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#9b87f5",
+          DEFAULT: "#1d4ed8", // Синий как у Askona
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -55,6 +55,12 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        askona: {
+          blue: "#1d4ed8",
+          red: "#dc2626",
+          navy: "#1e3a8a",
+          gray: "#6b7280",
         },
       },
       borderRadius: {

@@ -76,12 +76,31 @@ const ProductCatalog = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product) => (
-            <ProductCard key={product.id} {...product} />
-          ))}
+        <div className="lg:grid lg:grid-cols-4 lg:gap-8">
+          {/* Пустая колонка для выравнивания с фильтрами */}
+          <div className="lg:col-span-1 hidden lg:block"></div>
+
+          {/* Сетка товаров */}
+          <div className="lg:col-span-3 pb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {products.map((product) => (
+                <ProductCard key={product.id} {...product} />
+              ))}
+            </div>
+
+            {/* Кнопка "Показать ещё" */}
+            <div className="text-center mt-8">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-askona-blue text-askona-blue hover:bg-askona-blue hover:text-white"
+              >
+                Показать ещё товары
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
